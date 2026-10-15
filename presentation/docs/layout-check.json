@@ -1,0 +1,587 @@
+[
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "team",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "cover",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "promo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "story",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "loss",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "problem",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "reveal",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "flow",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "knowledge",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "quest",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "demo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "now",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "id": "vision",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "team",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "cover",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "promo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "story",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "loss",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "problem",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "reveal",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "flow",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "knowledge",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "quest",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "demo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "now",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "id": "vision",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "team",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "cover",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "promo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "story",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "loss",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "problem",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "reveal",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "flow",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "knowledge",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "quest",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "demo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "now",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "id": "vision",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "team",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "cover",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "promo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "story",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "loss",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "problem",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "reveal",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "flow",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "knowledge",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "quest",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "demo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "now",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "id": "vision",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "team",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "cover",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "promo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "story",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "loss",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "problem",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "reveal",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "flow",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "knowledge",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "quest",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "demo",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "now",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  },
+  {
+    "width": 667,
+    "height": 375,
+    "id": "vision",
+    "stageOverflow": 0,
+    "pageOverflow": 0,
+    "clipped": [],
+    "motion": "off"
+  }
+]

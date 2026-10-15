@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <title>New Babel · AI 协作工作台</title>
+    <link rel="icon" type="image/png" href="/assets/new-babel-logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="landing" class="landing">
+      <div class="landing-glow landing-glow-one"></div>
+      <div class="landing-glow landing-glow-two"></div>
+      <header class="landing-header">
+        <div class="brand"><img class="brand-logo" src="/assets/new-babel-logo.png" alt="" /><span>New Babel</span></div>
+        <span class="header-tag">局域网双人协作 · 模拟 Agent 辅助</span>
+      </header>
+      <main class="landing-main">
+        <section class="landing-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> 把跨部门事项推进到可验收结果</div>
+          <h1>让每一件事<br /><em>找到下一位负责人。</em></h1>
+          <p>在共享画布上保留问题与依据，把分歧汇成决策，把决策交给明确的负责人推进。模拟 Agent 先给出建议，再由人确认。</p>
+          <div class="landing-benefits">
+            <div><span class="benefit-icon">↗</span><span><strong>事项推进</strong><small>阻塞、下一人、验收条件</small></span></div>
+            <div><span class="benefit-icon">✦</span><span><strong>可控辅助</strong><small>模拟建议、人工确认</small></span></div>
+            <div><span class="benefit-icon">◎</span><span><strong>决策留痕</strong><small>依据、异议与责任记录</small></span></div>
+          </div>
+          <div class="landing-preview" aria-hidden="true">
+            <div class="preview-top"><span>字段确认事项 · 脚本示意</span><span>2 位模拟成员</span></div>
+            <div class="preview-card preview-card-a"><b>待解决</b><span>字段口径应采用哪个版本？</span></div>
+            <div class="preview-card preview-card-b"><b>决策依据</b><span>业务规则、页面版本与异议</span></div>
+            <div class="preview-card preview-card-c"><b>下一步</b><span>负责人修改，审核人验收</span></div>
+            <div class="preview-line preview-line-a"></div><div class="preview-line preview-line-b"></div>
+          </div>
+        </section>
+        <section class="entry-card" aria-label="创建或加入画布">
+          <div class="entry-tabs" role="tablist">
+            <button id="entry-create-tab" class="entry-tab active" data-entry="create" role="tab" aria-selected="true">新建画布</button>
+            <button id="entry-join-tab" class="entry-tab" data-entry="join" role="tab" aria-selected="false">加入画布</button>
+          </div>
+          <div id="create-fields">
+            <div class="entry-label">选择协作方式</div>
+            <div class="template-list">
+              <button class="template-option selected" type="button" data-template="matter">
+                <span class="template-emoji mint">▦</span><span><strong>事项推进</strong><small>汇集依据、记录决策、责任交付与验收</small></span><span class="template-check">✓</span>
+              </button>
+              <button class="template-option" type="button" data-template="debate">
+                <span class="template-emoji">◈</span><span><strong>想法辩论</strong><small>保留原有自由画布与讨论流程</small></span><span class="template-check">✓</span>
+              </button>
+            </div>
+            <label class="field-label" for="new-title">画布名称 <span>选填</span></label>
+            <input id="new-title" class="text-input" type="text" maxlength="60" placeholder="例如：知识问答产品方案讨论" />
+          </div>
+          <div id="join-fields" hidden>
+            <label class="field-label" for="join-link">画布链接或 ID</label>
+            <input id="join-link" class="text-input" type="text" placeholder="粘贴同事分享的画布链接" />
+          </div>
+          <label class="field-label" for="nickname">你的昵称</label>
+          <input id="nickname" class="text-input" type="text" maxlength="24" placeholder="输入昵称，方便同事识别" autocomplete="nickname" />
+          <button id="entry-submit" class="primary-button entry-submit" type="button">创建并进入 <span>→</span></button>
+          <div id="entry-error" class="form-error" role="alert" hidden></div>
+          <div class="demo-entry">
+            <div><strong>先看一遍协作流程</strong><span>自动播放 · 约 45 秒 · 两位成员与 Agent 均为模拟</span></div>
+            <button id="demo-start" class="demo-entry-button" type="button">▶ 自动播放演示</button>
+          </div>
+          <p class="entry-note">首版适用于同一局域网协作。昵称用于区分参与者；请勿在画布中填写敏感信息。</p>
+        </section>
+      </main>
+      <footer class="landing-footer">New Babel · 协作原型 <span>2026 · Demo</span></footer>
+    </div>
+
+    <div id="app" class="app-shell" hidden>
+      <aside class="sidebar">
+        <div class="sidebar-brand"><img class="brand-logo" src="/assets/new-babel-logo.png" alt="" /><span>New Babel</span><span class="brand-version">BETA</span></div>
+        <div class="workspace-heading"><div class="sidebar-overline">当前画布</div><h2 id="side-board-title">加载中…</h2><div id="side-template" class="template-chip">想法辩论</div></div>
+        <div class="sidebar-scroll">
+          <section class="side-section">
+            <div class="section-header"><span>协作目标</span><button id="goal-edit-open" class="icon-button subtle" title="编辑目标" aria-label="编辑目标">✎</button></div>
+            <div id="goal-display" class="goal-card"><span class="empty-muted">尚未设置协作目标</span></div>
+            <div id="goal-editor" class="goal-editor" hidden><textarea id="goal-input" rows="3" maxlength="500" placeholder="写下这次协作要回答的问题"></textarea><div><button id="goal-cancel" class="text-button">取消</button><button id="goal-save" class="mini-primary">保存</button></div></div>
+            <button id="goal-confirm" class="goal-confirm" hidden>确认协作目标</button>
+          </section>
+          <section class="side-section matter-side-section">
+            <div class="section-header"><span>当前事项</span><button id="matter-side-edit" class="icon-button subtle" title="编辑事项" aria-label="编辑事项">✎</button></div>
+            <div id="matter-side-card" class="matter-side-card"></div>
+          </section>
+          <section class="side-section">
+            <div class="section-header"><span>画布工具</span></div>
+            <button id="add-card-side" class="side-action"><span class="action-icon blue">＋</span><span>新增卡片</span><kbd>N</kbd></button>
+            <button id="connect-side" class="side-action"><span class="action-icon violet">↗</span><span>连接卡片</span><kbd>L</kbd></button>
+            <button id="agent-side" class="side-action"><span class="action-icon amber">✦</span><span>个人 Agent</span><span class="side-action-arrow">›</span></button>
+          </section>
+          <section class="side-section">
+            <div class="section-header"><span>在线成员</span><span id="participant-count" class="count-badge">0</span></div>
+            <div id="participants" class="participants-list"></div>
+          </section>
+          <section class="side-section activity-section">
+            <div class="section-header"><span>协作动态</span><span class="live-dot" title="实时更新"></span></div>
+            <div id="activity-list" class="activity-list"></div>
+          </section>
+        </div>
+        <div class="sidebar-user"><div id="self-avatar" class="avatar self">我</div><span><strong id="self-name">我</strong><small>当前参与者</small></span><button id="sidebar-share" class="icon-button" title="复制分享链接" aria-label="复制分享链接">↗</button></div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="topbar-title"><div class="breadcrumb">事项工作台 <span>›</span> 共享画布</div><div class="title-row"><h1 id="board-title">加载中…</h1><span id="board-status" class="status-pill">进行中</span></div></div>
+          <div class="topbar-actions"><div id="top-participants" class="avatar-stack"></div><button id="share-button" class="outline-button"><span>↗</span> 分享画布</button><button id="complete-button" class="primary-button compact">完成协作</button></div>
+        </header>
+        <nav class="workspace-views" aria-label="工作视图">
+          <button class="workspace-view active" data-view="canvas" aria-current="page">画布</button>
+          <button class="workspace-view" data-view="inbox">待我处理 <span id="inbox-count" class="view-count">0</span></button>
+          <button class="workspace-view" data-view="decisions">决策清单 <span id="decision-count" class="view-count">0</span></button>
+          <button class="workspace-view" data-view="timeline">时间线</button>
+        </nav>
+        <div class="canvas-subbar"><div class="subbar-left"><span class="canvas-kicker">自由画布</span><span id="canvas-hint">拖动画布探索空间，拖动卡片调整位置</span></div><div class="subbar-right"><span id="connection-hint" class="connection-hint" hidden>先选起点卡片，再选终点卡片</span><button id="connect-top" class="tool-button" title="连接两张卡片">↗ <span>连线</span></button><button id="add-card-top" class="tool-button accent">＋ <span>卡片</span></button></div></div>
+        <div id="canvas-viewport" class="canvas-viewport" tabindex="0" aria-label="可平移和缩放的协作画布">
+          <div class="canvas-grid"></div>
+          <div id="canvas-world" class="canvas-world"><svg id="edges-svg" class="edges-svg" aria-hidden="true"><defs><marker id="arrow-head" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 0 L 9 4.5 L 0 9 z" fill="#9eacc1" /></marker></defs><g id="edges-layer"></g></svg><div id="cards-layer" class="cards-layer"></div></div>
+          <div id="canvas-goal" class="canvas-goal"></div>
+          <div id="empty-canvas" class="empty-canvas" hidden><div class="empty-canvas-icon">◇</div><h3>从第一张卡片开始</h3><p>记录观点、任务或问题；随后连接卡片，逐步搭建讨论脉络。</p><button id="empty-add-card" class="primary-button">＋ 新建卡片</button></div>
+          <div class="canvas-controls"><button id="zoom-out" aria-label="缩小" title="缩小">−</button><span id="zoom-level">100%</span><button id="zoom-in" aria-label="放大" title="放大">＋</button><span class="control-divider"></span><button id="zoom-fit" title="回到画布内容" aria-label="回到画布内容">⌖</button></div>
+          <div class="canvas-corner-note"><span class="note-dot"></span><span id="save-status">已连接 · 实时协作</span></div>
+        </div>
+        <section id="workflow-viewport" class="workflow-viewport" aria-label="事项工作视图" hidden>
+          <div class="workflow-header"><div><span class="workflow-eyebrow">事项推进</span><h2 id="workflow-view-title">待我处理</h2><p id="workflow-view-subtitle">从同一事项记录中查看下一步、决策与协作过程。</p></div><button id="workflow-edit-matter" class="outline-button" type="button">编辑事项主卡</button></div>
+          <div id="workflow-content" class="workflow-content"></div>
+        </section>
+      </main>
+
+      <aside class="inspector">
+        <div class="inspector-tabs" role="tablist"><button class="inspector-tab active" data-panel="card">卡片详情</button><button class="inspector-tab" data-panel="agent">个人 Agent <span class="agent-private-dot"></span></button><button class="inspector-tab" data-panel="overview">协作进展</button></div>
+        <div id="panel-card" class="inspector-panel active"><div id="card-detail" class="card-detail-empty"><div class="detail-empty-icon">▤</div><h3>选择一张卡片</h3><p>查看内容、编辑锁、负责人和讨论记录。</p></div></div>
+        <div id="panel-agent" class="inspector-panel" hidden>
+          <div class="panel-intro"><div class="panel-eyebrow"><span class="sparkle">✦</span> 私有工作区</div><h2>个人 Agent</h2><p>先在这里预览建议；只有你点击“发布到画布”，其他人才会看到。</p></div>
+          <div class="privacy-note"><span>◉</span><span>指令和预览会由画布服务端处理，不向其他画布成员广播；你发布后才进入共享画布。本 Demo 返回模拟结果，不调用真实模型。请勿填写敏感信息。</span></div>
+          <div id="agent-context" class="agent-context" hidden></div>
+          <div class="agent-form"><label class="field-label" for="agent-action">希望 Agent 做什么</label><div class="segmented"><button class="segment active" data-agent-mode="add">新增卡片</button><button class="segment" data-agent-mode="rewrite">改写卡片</button></div><div id="agent-target-wrap" hidden><label class="field-label" for="agent-target">目标卡片</label><select id="agent-target" class="text-input"></select></div><label class="field-label" for="agent-prompt">你的指令</label><textarea id="agent-prompt" rows="5" maxlength="600" placeholder="例如：基于当前讨论，补充一个需要验证的风险"></textarea><button id="agent-preview-button" class="primary-button full">✦ 生成模拟预览</button></div>
+          <div id="agent-preview" class="agent-preview" hidden></div>
+        </div>
+        <div id="panel-overview" class="inspector-panel" hidden>
+          <div class="panel-intro"><div class="panel-eyebrow"><span class="sparkle">✧</span> 共享可见</div><h2>协作进展</h2><p>整理目标、证据、卡点与需要团队确认的建议。</p></div>
+          <div id="overview-content"></div>
+        </div>
+      </aside>
+    </div>
+    <section id="demo-player" class="demo-player" aria-label="自动播放演示" aria-live="polite" hidden>
+      <div class="demo-player-head"><div class="demo-player-brand"><img src="/assets/new-babel-logo.png" alt="" /><span>New Babel</span><span class="demo-player-tag">脚本模拟</span></div><span id="demo-counter" class="demo-counter">准备中</span></div>
+      <div id="demo-progress" class="demo-progress" aria-hidden="true"><span></span></div>
+      <p class="demo-disclaimer">所有成员、确认与 Agent 输出均为脚本模拟；真实协作仍需用户操作。</p>
+      <div id="demo-actor" class="demo-actor">模拟主持人 A</div>
+      <h2 id="demo-step-title">准备演示画布</h2>
+      <p id="demo-step-detail">正在建立独立演示画布。</p>
+      <div class="demo-player-actions">
+        <button id="demo-pause" type="button">暂停</button>
+        <button id="demo-replay" type="button">重播</button>
+        <button id="demo-takeover" type="button">手动接管</button>
+      </div>
+    </section>
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <div id="modal-root"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/demo-workflow.js" defer></script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

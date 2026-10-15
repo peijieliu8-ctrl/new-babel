@@ -1,0 +1,14 @@
+{
+  "name": "new-babel-html-ppt",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "vendor": "node scripts/vendor.mjs",
+    "check": "node scripts/check.mjs && node --test scripts/*.test.mjs"
+  },
+  "dependencies": {
+    "reveal.js": "6.0.2"
+  }
+}

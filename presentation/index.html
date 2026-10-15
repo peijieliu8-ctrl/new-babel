@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080a0a">
+  <meta name="description" content="New Babel 产品路演：为企业重建统一的语言。">
+  <title>新巴别塔 New Babel · 产品路演</title>
+  <link rel="icon" href="assets/new-babel-icon.png" type="image/png">
+  <link rel="stylesheet" href="assets/vendor/reset.css">
+  <link rel="stylesheet" href="assets/vendor/reveal.css">
+  <link rel="stylesheet" href="src/deck.css">
+  <link rel="stylesheet" href="src/effects.css">
+</head>
+<body>
+  <a class="skip-link" href="#deck-controls">跳至演示控制</a>
+  <header class="deck-brand" aria-label="New Babel">
+    <img src="assets/new-babel-icon.png" alt="" width="32" height="32">
+    <span>New Babel</span>
+  </header>
+  <button class="effects-toggle" id="effects-toggle" type="button" aria-label="关闭动态特效" aria-pressed="true" title="关闭动态特效">✦</button>
+  <main class="reveal" aria-label="New Babel 产品路演">
+    <div class="slides" id="slides"></div>
+  </main>
+  <footer class="deck-footer" id="deck-controls">
+    <span class="chapter-label" id="chapter-label">NEW BABEL / KEYNOTE</span>
+    <nav class="deck-nav" aria-label="演示控制">
+      <button type="button" id="overview" aria-label="查看全部幻灯片" title="总览 · Esc">总览</button>
+      <button type="button" id="speaker" aria-label="打开本页演讲备注" title="本页演讲备注">备注</button>
+      <span id="slide-counter" aria-live="polite">00 / 12</span>
+      <button type="button" id="previous" aria-label="上一步" title="上一步 · ←">←</button>
+      <button type="button" id="next" aria-label="下一步" title="下一步 · → 或空格">→</button>
+    </nav>
+  </footer>
+  <p class="deck-toast" id="deck-toast" role="status"></p>
+  <div class="transition-beam" id="transition-beam" aria-hidden="true"></div>
+  <dialog class="speaker-dialog" id="speaker-dialog" aria-labelledby="speaker-title">
+    <header><h2 id="speaker-title">演讲备注</h2><button type="button" id="close-speaker" aria-label="关闭演讲备注">×</button></header>
+    <div id="speaker-content"></div>
+    <button type="button" id="presenter-window">打开双屏演讲窗口 ↗</button>
+    <p>双屏窗口需要浏览器允许弹窗。按 Esc 返回路演。</p>
+  </dialog>
+  <noscript>此演示需要启用 JavaScript。演讲稿见 docs/speaker-notes.md。</noscript>
+  <script src="assets/vendor/reveal.js"></script>
+  <script src="assets/vendor/notes.js"></script>
+  <script src="src/slides.js"></script>
+  <script src="src/particles.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

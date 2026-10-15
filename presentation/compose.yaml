@@ -1,0 +1,7 @@
+name: new-babel-keynote
+services:
+  keynote:
+    build: .
+    ports:
+      - "127.0.0.1:${PPT_PORT:-32150}:8080"
+    restart: unless-stopped

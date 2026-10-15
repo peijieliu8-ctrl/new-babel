@@ -1,0 +1,22 @@
+{
+  "name": "new-babel-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-network New Babel collaboration demo with simulated agents",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}

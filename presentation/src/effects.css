@@ -1,0 +1,20 @@
+/* Decorative layers travel with Reveal; words and controls keep the foreground. */
+.particle-stage { position:absolute; z-index:2; inset:0; display:block; width:100%; height:100%; pointer-events:none; }
+.slide-content { z-index:3; }
+.effects-toggle { position:fixed; z-index:20; top:max(22px, env(safe-area-inset-top)); right:clamp(22px, 3.2vw, 64px); display:grid; place-items:center; width:38px; height:32px; padding:0; border:1px solid #5b634044; border-radius:4px; background:#11180ec9; color:var(--gold); font-size:23px; line-height:1; cursor:pointer; transition:color .2s, border-color .2s; }
+.effects-toggle:hover { color:#fff0ca; border-color:#b9ae7c; }
+.effects-toggle[aria-pressed='false'] { color:#74816e; }
+.effects-toggle:disabled { cursor:default; opacity:.5; }
+.transition-beam { position:fixed; z-index:6; top:0; left:0; width:30vw; height:100dvh; pointer-events:none; opacity:0; background:linear-gradient(90deg, transparent, #dcce9910 45%, #e8dbb638 50%, #c1e8d412 53%, transparent); }
+body[data-motion='on'] .present .stage > .eyebrow { animation:stage-enter .7s both; }
+body[data-motion='on'] .present .stage > .headline:not(.fragment),
+body[data-motion='on'] .present .stage > .display:not(.fragment),
+body[data-motion='on'] .present .cover-lockup { animation:stage-enter .95s cubic-bezier(.2,.75,.2,1) .08s backwards; }
+body[data-motion='on'] .present .stage > :is(.unity-canvas,.flow-track,.knowledge-tree,.quest-map,.demo-layout,.signal-chain,.fracture-grid,.now-grid) { animation:stage-enter 1.05s cubic-bezier(.2,.75,.2,1) .18s backwards; }
+@keyframes stage-enter { from { opacity:0; transform:translate3d(0,22px,0); } to { opacity:1; transform:translate3d(0,0,0); } }
+body[data-motion='off'] .particle-stage, body[data-motion='off'] .transition-beam { display:none; }
+body[data-motion='off'] .slides *, body[data-motion='off'] .slides *::before, body[data-motion='off'] .slides *::after { animation:none !important; transition-duration:.001ms !important; }
+body[data-motion='off'] .slides section { transition-duration:.001ms !important; }
+@media (max-height:600px) and (orientation:landscape) { .effects-toggle { top:12px; width:32px; height:28px; font-size:20px; } }
+@media (prefers-reduced-motion:reduce) { body:not([data-motion='on']) .particle-stage, body:not([data-motion='on']) .transition-beam { display:none; } }
+@media print { .particle-stage, .transition-beam, .effects-toggle { display:none !important; } }
